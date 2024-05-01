@@ -1,6 +1,6 @@
 (function() {
     const inputSize = 14;
-    const hiddenSize = 20;
+    const hiddenSize = 80;
     const outputSize = 7;
 
     let weightsInputHidden = new Array(inputSize).fill(0).map(() => new Array(hiddenSize).fill(0));
@@ -242,7 +242,7 @@
         input.right = desiredOutput[3] > 0.5;
         input.field = desiredOutput[4] > 0.5;
         input.fire = desiredOutput[5] > 0.5;  
-        /* m.angle = output[6] * Math.PI * 2; */
+        m.angle = output[6] * Math.PI * 2;
     }
     function saveWeightsAndBiases() {
         const savedData = {
